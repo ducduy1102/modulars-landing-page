@@ -14,7 +14,23 @@
     />
 
     <!-- Favicon -->
-    
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -23,5 +39,78 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>MODULARS</title>
   </head>
-  <body></body>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container">
+        <!-- Header top -->
+        <div class="header-top">
+          <a href="/">
+            <div class="logo">
+              <img src="./assets/img/logo.svg" alt="" class="logo__img" />
+              <span class="logo__title">MODULARS</span>
+            </div>
+          </a>
+          <!-- Navbar -->
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link navbar__link--active">Home</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">About</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">Blog</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Action -->
+          <button class="btn header__action">Sign Up</button>
+        </div>
+
+        <!-- HERO -->
+        <section class="hero">
+          <section class="hero__content">
+            <h1 class="hero__heading">We’re a creative design agency.</h1>
+            <p class="hero__desc">A brilliant, modular agency template for startup’s build yours toady.</p>
+            <div class="hero__cta">
+              <button class="btn">Get in touch</button>
+              <div class="watch-btn">
+                <div class="watch-btn__half-circle">
+                  <a class="watch-btn__icon" href="/">
+                    <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.48979 4.22586C8.15106 4.61996 8.13773 5.58212 7.4658 5.95775L1.49682 9.29454C0.824887 9.67017 -0.00170366 9.17755 0.00896126 8.40782L0.103701 1.57014C0.114366 0.800411 0.954284 0.330874 1.61555 0.724974L7.48979 4.22586Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="watch-btn__content">Watch Video</div>
+              </div>
+            </div>
+          </section>
+
+          <div class="hero__media">
+            <div class="hero__bg-center"></div>
+            <figure class="hero__images">
+              <img src="./assets/img/decorate-01.png" alt="" class="hero__img" />
+              <img src="./assets/img/decorate-02.png" alt="" class="hero__img" />
+              <img src="./assets/img/decorate-03.png" alt="" class="hero__img" />
+            </figure>
+            <div class="hero__decorate">
+              <img src="./assets/img/flower.png" alt="" class="hero__decor">
+              <img src="./assets/img/line-01.png" alt="" class="hero__decor">
+              <img src="./assets/img/line-02.png" alt="" class="hero__decor">
+              <img src="./assets/img/flower.png" alt="" class="hero__decor">
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+  </body>
 </html>

@@ -469,21 +469,24 @@ button {
 .service__content {
   background: #fff;
   padding: 24px 0;
+  border-radius: 0 0 20px 20px;
   transition: background, box-shadow, translate;
   transition-duration: 0.5s;
+}
+
+.service__content:hover {
+  background: #fff;
+  box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.section-heading--small,
+.service__desc {
+  transition: translate 0.7s;
 }
 
 .service__content:hover .section-heading--small,
 .service__content:hover .service__desc {
   translate: 18px;
-  transition-duration: 0.5s;
-}
-
-.service__content:hover {
-  position: relative;
-  border-radius: 0 0 20px 20px;
-  background: #fff;
-  box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
 }
 
 .service__desc {

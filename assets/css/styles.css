@@ -14,6 +14,7 @@ body {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
   font-family: 'Public Sans', sans-serif;
+  font-family: 'Sonsie One', cursive;
 }
 
 /* Common */
@@ -41,6 +42,7 @@ textarea {
   display: inline-block;
   min-width: 173px;
   height: var(--height);
+  border: var(--primary-color);
   border-radius: 40px;
   text-align: center;
   font-size: 1.8rem;
@@ -212,6 +214,8 @@ textarea {
 .hero__media {
   position: relative;
   flex-grow: 1;
+  /* 543 + 88 */
+  height: 631px;
   padding: 0 25px 0 76px;
 }
 
@@ -270,4 +274,59 @@ textarea {
 .hero__decor:nth-child(4) {
   left: 553px;
   bottom: -111px;
+}
+
+/* ---------------DONORS--------------- */
+.donor {
+  font-family: 'Poppins', sans-serif;
+  margin: 42px 0;
+}
+
+.donor__inner {
+  height: 201px;
+  border-radius: 100px;
+  background: #e2eddf;
+}
+
+.donor__list {
+  display: flex;
+  align-items: center;
+  padding: 76px 121px;
+  gap: 42px;
+}
+
+.donor__item {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #163c35;
+}
+
+.donor__agworld {
+  gap: 10px;
+}
+
+.donor__item:first-child .donor__name {
+  font-size: 3.1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.donor__item:nth-child(2) .donor__name {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.donor__item:nth-child(3) .donor__name {
+  font-size: 2.6rem;
+  line-height: 1.5;
+  color: #163c35;
+}
+
+.donor__item:nth-child(4) .donor__name {
+  font-family: Sonsie One;
+  font-size: 2.3rem;
+  line-height: 1.3;
 }

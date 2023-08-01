@@ -696,10 +696,6 @@ button {
 }
 
 /* ---------------PROCESS--------------- */
-.process {
-  /* margin-top: 36px; */
-}
-
 .process__title {
   margin-top: 36px;
 }
@@ -726,11 +722,12 @@ button {
 }
 
 .process-item {
-  height: 185px;
   position: relative;
+  height: 185px;
   display: flex;
   align-items: center;
-  transition: background 0.5s;
+  transition: background, visibility;
+  transition-duration: 0.5s;
 }
 
 .process-item::after {
@@ -748,11 +745,13 @@ button {
 }
 
 .process-item:hover .process-item__link {
-  display: block;
+  /* display: block; */
+  visibility: visible;
 }
 
 .process-item__number {
   display: block;
+  margin-left: 30px;
   font-size: 7.2rem;
   font-weight: 600;
   line-height: 0.72;
@@ -762,6 +761,10 @@ button {
 .process-item__block {
   margin-left: 64px;
   width: 31%;
+}
+
+.process-item__block-01{
+  margin-left: 81px;
 }
 
 .process-item__heading {
@@ -776,7 +779,8 @@ button {
   font-size: 18px;
   color: #575d5e;
   text-decoration: underline;
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 
 .process-item__img {

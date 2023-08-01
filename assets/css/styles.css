@@ -782,7 +782,7 @@ button {
 .process-item__img {
   content: '';
   position: absolute;
-  top: -321px;
+  top: -260px;
   right: 0;
 }
 

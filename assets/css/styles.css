@@ -497,12 +497,13 @@ button {
 /* ---------------ABOUT--------------- */
 .about {
   margin-top: 78px;
-  padding: 79px;
+  padding: 79px 0;
 }
 
 .about__inner {
   display: flex;
   gap: 64px;
+  height: 570px;
 }
 
 .about__media {
@@ -512,6 +513,7 @@ button {
 }
 
 .about__images {
+  margin-top: 13px;
   /* position: relative; */
   display: flex;
   height: 557px;
@@ -691,4 +693,100 @@ button {
   height: 0.8px;
   top: 72px;
   background: #83a17d;
+}
+
+/* ---------------PROCESS--------------- */
+.process {
+  /* margin-top: 36px; */
+}
+
+.process__title {
+  margin-top: 36px;
+}
+
+.process__heading {
+  position: relative;
+  width: 477px;
+}
+
+.process__heading::after {
+  content: '';
+  position: absolute;
+  width: 66px;
+  height: 2px;
+  top: 84px;
+  left: 420px;
+  background: var(--color-content);
+}
+
+.process__list {
+  margin-top: 81px;
+  display: flex;
+  flex-direction: column;
+}
+
+.process-item {
+  height: 185px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: background 0.5s;
+}
+
+.process-item::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 185px;
+  background: linear-gradient(180deg, #83a17d 4.17%, rgba(131, 161, 125, 0) 36.46%);
+}
+
+.process-item:hover {
+  border-radius: 33px;
+  background: var(--scondery-color-light-green, #e2eddf);
+}
+
+.process-item:hover .process-item__link {
+  display: block;
+}
+
+.process-item__number {
+  display: block;
+  font-size: 7.2rem;
+  font-weight: 600;
+  line-height: 0.72;
+  color: var(--primary-color);
+}
+
+.process-item__block {
+  margin-left: 64px;
+  width: 31%;
+}
+
+.process-item__heading {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--color-content);
+}
+
+.process-item__link {
+  position: absolute;
+  margin-top: 22px;
+  font-size: 18px;
+  color: #575d5e;
+  text-decoration: underline;
+  display: none;
+}
+
+.process-item__img {
+  content: '';
+  position: absolute;
+  top: -321px;
+  right: 0;
+}
+
+.process-item__desc {
+  margin-right: 41px;
+  flex-basis: 50%;
 }

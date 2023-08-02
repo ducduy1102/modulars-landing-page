@@ -122,20 +122,18 @@ button {
 
 /* ---------------HEADERS--------------- */
 .header {
-  position: relative;
+  /* position: relative; */
   font-family: 'Public Sans', sans-serif;
   padding-top: 28px;
   min-width: 100vh;
 }
 
-.header-top::after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 1px;
-  top: 98px;
-  background: linear-gradient(18deg, #fff 0%, #dddcdc 51.25%, rgba(212, 212, 212, 0) 100%);
-}
+/* .header-top.fixed {
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background: #eaeaea;
+} */
 
 .header-top {
   display: flex;
@@ -201,9 +199,20 @@ button {
 
 /* ---------------HERO--------------- */
 .hero {
+  position: relative;
   display: flex;
   align-items: center;
   margin-top: 74px;
+}
+
+.hero::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100%;
+  height: 1px;
+  top: -61px;
+  background: linear-gradient(18deg, #fff 0%, #dddcdc 51.25%, rgba(212, 212, 212, 0) 100%);
 }
 
 .hero__content {
@@ -392,6 +401,7 @@ button {
 /* ---------------SERVICE--------------- */
 .service {
   margin-top: 64px;
+  padding-top: 42px;
 }
 
 .service-top {
@@ -432,6 +442,7 @@ button {
 }
 
 .service-top__btn:hover {
+  cursor: pointer;
   color: #fff;
   background: var(--primary-color);
 }

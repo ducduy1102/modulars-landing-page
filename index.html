@@ -41,11 +41,11 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header">
+    <header id="home" class="header">
       <div class="container">
         <!-- Header top -->
         <div class="header-top">
-          <a href="#!">
+          <a href="#home">
             <div class="logo">
               <img src="./assets/img/logo.svg" alt="" class="logo__img" />
               <span class="logo__title">MODULARS</span>
@@ -55,13 +55,13 @@
           <nav class="navbar">
             <ul class="navbar__list">
               <li class="navbar__item">
-                <a href="#!" class="navbar__link navbar__link--active">Home</a>
+                <a href="#home" class="navbar__link navbar__link--active">Home</a>
               </li>
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">About</a>
+                <a href="#about" class="navbar__link">About</a>
               </li>
               <li class="navbar__item">
-                <a href="#!" class="navbar__link">Blog</a>
+                <a href="#blog" class="navbar__link">Blog</a>
               </li>
               <li class="navbar__item">
                 <a href="#!" class="navbar__link">Contact</a>
@@ -234,7 +234,7 @@
       </section>
 
       <!-- About-->
-      <section class="about">
+      <section id="about" class="about">
         <div class="container">
           <div class="about__inner">
             <div class="about__media">
@@ -337,6 +337,73 @@
         </div>
       </section>
 
+      <!-- Project -->
+      <section class="project">
+        <div class="container">
+          <div class="project-top">
+            <h2 class="project__heading section-heading">A quick glance of our past projects</h2>
+            <div class="project-content">
+              <p class="project__desc section-desc">
+                Are you strive for the fast project simplicity and clarity. Great design is born of those two things.
+              </p>
+              <a href="#!" class="project__link section-desc">
+                Browse all Projects
+                <svg class="project__btn" width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 6.29415H21M21 6.29415L15.7059 1.00003M21 6.29415L15.7059 11"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="project__media">
+            <img src="./assets/img/flower.png" alt="" class="media-decor__flower" />
+            <img src="./assets/img/line-03.png" alt="" class="media-decor__line" />
+            <div class="project__media-group">
+              <video id="videoDemo" src="./assets/video/Waves - Short Cinematic Video.mp4" class="project__video"></video>
+              <button id="playBtn" class="project__play-btn" onclick="playFunction()">
+                <!-- <svg class="img__play-icon" width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="59" cy="59" r="59" fill="black" fill-opacity="0.7"></circle>
+                  <path
+                    d="M75.5828 58.1411C76.2513 58.5227 76.256 59.485 75.5912 59.8731L51.6588 73.8459C50.994 74.2341 50.1583 73.757 50.1546 72.9872L50.02 45.2747C50.0162 44.5049 50.8472 44.0197 51.5157 44.4014L75.5828 58.1411Z"
+                    fill="white"
+                  ></path>
+                </svg> -->
+                <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M25.5828 14.1411C26.2513 14.5227 26.256 15.485 25.5912 15.8731L1.65877 29.8459C0.993978 30.2341 0.158321 29.757 0.154581 28.9872L0.0199589 1.2747C0.0162194 0.50491 0.847206 0.0197453 1.51573 0.401403L25.5828 14.1411Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+
+              <script>
+                // Get the video
+                var video = document.getElementById('videoDemo');
+                //  Get Play Button
+                var btn = document.getElementById('playBtn');
+                // Play Function
+                video.removeAttribute('controls');
+                function playFunction() {
+                  if (video.paused) {
+                    video.play();
+                    btn.style.display = 'none';
+                    video.setAttribute('controls', 'controls');
+                  } else {
+                    video.pause();
+                  }
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Feature -->
       <section class="feature">
         <div class="container">
@@ -381,7 +448,7 @@
       </section>
 
       <!-- Blog & Article -->
-      <section class="blog">
+      <section id="blog" class="blog">
         <div class="container">
           <p class="section-title">BLOG & ARTICLES</p>
           <div class="blog-top">

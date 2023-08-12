@@ -37,23 +37,38 @@
 
     <!-- Styles CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
     <title>MODULARS</title>
   </head>
   <body>
     <!-- HEADER -->
-    <header id="home" class="header">
+    <header id="home" class="header fixed">
       <div class="container">
-        <!-- Header top -->
-        <div class="header-top">
+        <div class="header__body">
+          <!-- Tablet Menu -->
+          <label for="menu-checkbox" class="toggle-menu hide-on-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
+
+          <!-- Logo -->
           <a href="#home">
             <div class="logo">
               <img src="./assets/img/logo.svg" alt="" class="logo__img" />
               <span class="logo__title">MODULARS</span>
             </div>
           </a>
+
           <!-- Navbar -->
           <nav class="navbar">
-            <ul class="navbar__list">
+            <ul id="pc-nav" class="navbar__list">
               <li class="navbar__item">
                 <a href="#home" class="navbar__link navbar__link--active">Home</a>
               </li>
@@ -66,54 +81,100 @@
               <li class="navbar__item">
                 <a href="#!" class="navbar__link">Contact</a>
               </li>
+              <li class="show-on-mobile separate">
+                <a href="#!">Sign up</a>
+              </li>
             </ul>
           </nav>
           <!-- Action -->
           <button class="btn header__action">Sign Up</button>
+
+          <!-- Mobile Menu -->
+          <label for="menu-checkbox" class="toggle-menu show-on-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+              <path
+                fill="currentColor"
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+              />
+            </svg>
+          </label>
         </div>
+      </div>
+    </header>
 
-        <!-- HERO -->
-        <section class="hero">
-          <section class="hero__content">
-            <h1 class="hero__heading">We’re a creative design agency.</h1>
-            <p class="section-desc hero__desc">A brilliant, modular agency template for startup’s build yours toady.</p>
-            <div class="hero__cta">
-              <button class="btn">Get in touch</button>
-              <div class="watch-btn">
-                <div class="watch-btn__half-circle">
-                  <a class="watch-btn__icon" href="#!">
-                    <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.48979 4.22586C8.15106 4.61996 8.13773 5.58212 7.4658 5.95775L1.49682 9.29454C0.824887 9.67017 -0.00170366 9.17755 0.00896126 8.40782L0.103701 1.57014C0.114366 0.800411 0.954284 0.330874 1.61555 0.724974L7.48979 4.22586Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </a>
-                </div>
-                <div class="watch-btn__content">Watch Video</div>
-              </div>
-            </div>
-          </section>
+    <!-- Tablet/Mobile header -->
+    <header class="mobile-header">
+      <input type="checkbox" class="menu-checkbox" name="" id="menu-checkbox" hidden />
 
-          <div class="hero__media">
-            <div class="hero__bg-center"></div>
-            <figure class="hero__images">
-              <img src="./assets/img/decorate-01.png" alt="" class="hero__img" />
-              <img src="./assets/img/decorate-02.png" alt="" class="hero__img" />
-              <img src="./assets/img/decorate-03.png" alt="" class="hero__img" />
-            </figure>
-            <div class="hero__decorate">
-              <img src="./assets/img/flower.png" alt="" class="hero__decor" />
-              <img src="./assets/img/line-01.png" alt="" class="hero__decor" />
-              <img src="./assets/img/line-02.png" alt="" class="hero__decor" />
-              <img src="./assets/img/flower.png" alt="" class="hero__decor" />
-            </div>
+      <!-- Overlay -->
+      <label for="menu-checkbox" class="menu-overlay"></label>
+
+      <!-- Menu content -->
+      <div class="menu-drawer">
+        <!-- Logo -->
+        <a href="#home">
+          <div class="logo">
+            <img src="./assets/img/logo.svg" alt="" class="logo__img" />
+            <span class="logo__title">MODULARS</span>
           </div>
-        </section>
+        </a>
+
+        <!-- Navigation -->
+        <ul id="mobile-nav"></ul>
+        <script>
+          const pcNav = document.querySelector('#pc-nav');
+          const mobileNav = document.querySelector('#mobile-nav');
+
+          // copy from pc-nav -> mobile-nav
+          mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
       </div>
     </header>
 
     <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__body">
+            <section class="hero__content">
+              <h1 class="hero__heading">We’re a creative design agency.</h1>
+              <p class="section-desc hero__desc">A brilliant, modular agency template for startup’s build yours toady.</p>
+              <div class="hero__cta">
+                <button class="btn">Get in touch</button>
+                <div class="watch-btn">
+                  <div class="watch-btn__half-circle">
+                    <a class="watch-btn__icon" href="#!">
+                      <svg width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M7.48979 4.22586C8.15106 4.61996 8.13773 5.58212 7.4658 5.95775L1.49682 9.29454C0.824887 9.67017 -0.00170366 9.17755 0.00896126 8.40782L0.103701 1.57014C0.114366 0.800411 0.954284 0.330874 1.61555 0.724974L7.48979 4.22586Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="watch-btn__content">Watch Video</div>
+                </div>
+              </div>
+            </section>
+
+            <div class="hero__media">
+              <div class="hero__bg-center"></div>
+              <figure class="hero__images">
+                <img src="./assets/img/decorate-01.png" alt="" class="hero__img" />
+                <img src="./assets/img/decorate-02.png" alt="" class="hero__img" />
+                <img src="./assets/img/decorate-03.png" alt="" class="hero__img" />
+              </figure>
+              <div class="hero__decorate">
+                <img src="./assets/img/flower.png" alt="" class="hero__decor" />
+                <img src="./assets/img/line-01.png" alt="" class="hero__decor" />
+                <img src="./assets/img/line-02.png" alt="" class="hero__decor" />
+                <img src="./assets/img/flower.png" alt="" class="hero__decor" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- Donor -->
       <section class="donor">
         <div class="container">
@@ -149,7 +210,7 @@
           <!-- Service top -->
           <div class="service-top">
             <h2 class="section-heading service__heading">We offer a wide range of design services</h2>
-            <div class="service-top__cta">
+            <div class="service-top__cta hide-on-mobile">
               <button class="service-top__btn">
                 <svg width="22" height="13" viewBox="0 0 22 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -305,7 +366,7 @@
                 <h3 class="process-item__heading">Project idea</h3>
                 <a href="#!" class="process-item__link">Learn More</a>
               </div>
-              <img src="./assets/img/process-img.png" alt="" class="process-item__img" />
+              <img src="./assets/img/process-img.png" alt="" class="process-item__img hide-on-mobile" />
             </div>
 
             <!-- Process 2 -->
@@ -367,13 +428,6 @@
             <div class="project__media-group">
               <video id="videoDemo" src="./assets/video/Waves - Short Cinematic Video.mp4" class="project__video"></video>
               <button id="playBtn" class="project__play-btn" onclick="playFunction()">
-                <!-- <svg class="img__play-icon" width="118" height="118" viewBox="0 0 118 118" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="59" cy="59" r="59" fill="black" fill-opacity="0.7"></circle>
-                  <path
-                    d="M75.5828 58.1411C76.2513 58.5227 76.256 59.485 75.5912 59.8731L51.6588 73.8459C50.994 74.2341 50.1583 73.757 50.1546 72.9872L50.02 45.2747C50.0162 44.5049 50.8472 44.0197 51.5157 44.4014L75.5828 58.1411Z"
-                    fill="white"
-                  ></path>
-                </svg> -->
                 <svg width="27" height="30" viewBox="0 0 27 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M25.5828 14.1411C26.2513 14.5227 26.256 15.485 25.5912 15.8731L1.65877 29.8459C0.993978 30.2341 0.158321 29.757 0.154581 28.9872L0.0199589 1.2747C0.0162194 0.50491 0.847206 0.0197453 1.51573 0.401403L25.5828 14.1411Z"
@@ -545,7 +599,7 @@
             </div>
           </div>
 
-          <div class="footer__right">
+          <div class="footer__right hide-on-mobile">
             <!-- Pages -->
             <div class="footer__column">
               <h3 class="footer__heading">Pages</h3>

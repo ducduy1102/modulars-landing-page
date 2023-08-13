@@ -774,7 +774,7 @@ button {
   height: 185px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #83A17D;
+  border-bottom: 1px solid #83a17d;
   transition: background, border-radius, border-bottom;
   transition-duration: 0.6s;
 }
@@ -881,7 +881,7 @@ button {
   height: 2px;
   top: 83px;
   right: 92px;
-  background: #83A17D;
+  background: #83a17d;
 }
 
 .project-content {
@@ -1259,9 +1259,11 @@ button {
   font-weight: 500;
   color: #6a8383;
   line-height: 2.25;
+  transition: color 0.3s;
 }
 
 .footer__link:hover {
+  color: #c8c5c5;
   text-decoration: underline;
   text-underline-offset: 3px;
 }

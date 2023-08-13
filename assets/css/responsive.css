@@ -14,7 +14,6 @@
   }
 }
 
-/* Bug tràn màn hình service + feature */
 /* ---------------Tablet and mobile--------------- */
 @media screen and (max-width: 991.98px) {
   .hide-on-tablet {
@@ -152,7 +151,7 @@
     row-gap: 30px;
   }
 
-  /* about */
+  /* About */
   .about__inner {
     margin-top: 600px;
     flex-direction: column-reverse;
@@ -526,7 +525,7 @@
   /* About */
   .about {
     margin-top: 0;
-    padding-top: 25px;
+    padding: 25px 0;
   }
 
   .about__inner {
@@ -587,10 +586,12 @@
 
   .about__content-block {
     margin-top: 36px;
+    row-gap: 16px;
   }
 
   .content-block__item {
     align-items: center;
+    padding-bottom: 11px;
   }
 
   .content-block__percent {
@@ -699,7 +700,6 @@
 
   .media-decor__line {
     width: 50%;
-    /* height: 100%; */
     top: -66px;
     right: -21px;
   }

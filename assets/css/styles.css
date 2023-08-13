@@ -69,7 +69,7 @@ button {
 
 .section-heading--small {
   font-size: 2.2rem;
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 600;
   color: var(--color-content);
 }
@@ -118,6 +118,35 @@ button {
   color: var(--color-content);
   background: #e2eddf;
   cursor: pointer;
+}
+
+/* Xử lý tràn dòng */
+.line-clamp {
+  display: -webkit-box;
+  /* Gán giá trị mặc định 1 dòng nếu xuống hàng là tạo ... */
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+
+.line-clamp.line-3 {
+  --line-clamp: 3;
+}
+
+.line-clamp.line-4 {
+  --line-clamp: 4;
+}
+
+.line-clamp.line-5 {
+  --line-clamp: 5;
+}
+
+.break-all {
+  word-break: break-all;
 }
 
 /* ---------------HEADER--------------- */
@@ -504,6 +533,10 @@ button {
   box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
 }
 
+.service__content-heading {
+  width: 80%;
+}
+
 .section-heading--small,
 .service__desc {
   transition: translate 0.7s;
@@ -694,7 +727,7 @@ button {
   margin-top: 36px;
   display: flex;
   flex-direction: column;
-  row-gap: 58px;
+  row-gap: 38px;
 }
 
 .content-block__percent {
@@ -708,15 +741,8 @@ button {
   position: relative;
   display: flex;
   column-gap: 24px;
-}
-
-.content-block__item:after {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 0.8px;
-  top: 72px;
-  background: #83a17d;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #83a17d;
 }
 
 /* ---------------PROCESS--------------- */

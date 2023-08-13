@@ -45,7 +45,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header id="home" class="header fixed">
+    <header class="header fixed">
       <div class="container">
         <div class="header__body">
           <!-- Tablet Menu -->
@@ -59,7 +59,7 @@
           </label>
 
           <!-- Logo -->
-          <a href="#home">
+          <a href="#">
             <div class="logo">
               <img src="./assets/img/logo.svg" alt="" class="logo__img" />
               <span class="logo__title">MODULARS</span>
@@ -70,7 +70,7 @@
           <nav class="navbar">
             <ul id="pc-nav" class="navbar__list">
               <li class="navbar__item">
-                <a href="#home" class="navbar__link navbar__link--active">Home</a>
+                <a href="#" class="navbar__link navbar__link--active">Home</a>
               </li>
               <li class="navbar__item">
                 <a href="#about" class="navbar__link">About</a>
@@ -112,7 +112,7 @@
       <!-- Menu content -->
       <div class="menu-drawer">
         <!-- Logo -->
-        <a href="#home">
+        <a href="#">
           <div class="logo">
             <img src="./assets/img/logo.svg" alt="" class="logo__img" />
             <span class="logo__title">MODULARS</span>
@@ -164,11 +164,18 @@
                 <img src="./assets/img/decorate-02.png" alt="" class="hero__img" />
                 <img src="./assets/img/decorate-03.png" alt="" class="hero__img" />
               </figure>
-              <div class="hero__decorate">
+              <div class="hero__decorate hide-on-mobile">
                 <img src="./assets/img/flower.png" alt="" class="hero__decor" />
                 <img src="./assets/img/line-01.png" alt="" class="hero__decor" />
                 <img src="./assets/img/line-02.png" alt="" class="hero__decor" />
                 <img src="./assets/img/flower.png" alt="" class="hero__decor" />
+              </div>
+              <!-- Decorate on mobile -->
+              <div class="hero-decorate__mobile show-on-mobile">
+                <img src="./assets/img/small-flower.png" alt="" class="hero__decor" />
+                <img src="./assets/img/small-line-01.png" alt="" class="hero__decor" />
+                <img src="./assets/img/small-line-02.png" alt="" class="hero__decor" />
+                <img src="./assets/img/small-flower.png" alt="" class="hero__decor" />
               </div>
             </div>
           </div>
@@ -256,6 +263,31 @@
                 </section>
               </article>
 
+              <div class="btn-group show-on-mobile">
+                <!-- Button pre on mobile -->
+                <button class="service-top__btn show-on-mobile">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 5.23529H1.11482M1.11482 5.23529L5 1M1.11482 5.23529L5 9"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+                <!-- Button next on mobile -->
+                <button class="service-top__btn btn__next show-on-mobile">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1 5.23529H1.11482M1.11482 5.23529L5 1M1.11482 5.23529L5 9"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
               <!-- Service item 2 -->
               <article class="service__item">
                 <a href="#!">
@@ -303,9 +335,14 @@
                 <img src="./assets/img/about-img-01.jpg" alt="" class="about__img" />
                 <img src="./assets/img/about-img-02.jpg" alt="" class="about__img" />
               </figure>
-              <div class="about__decorate">
+              <div class="about__decorate hide-on-mobile">
                 <img src="./assets/img/flower.png" alt="" class="about__decor" />
                 <img src="./assets/img/about-decorate.png" alt="" class="about__decor" />
+              </div>
+              <!-- Decorate on mobile -->
+              <div class="about-decorate__mobile show-on-mobile">
+                <img src="./assets/img/about-flower.png" alt="" class="about__decor" />
+                <img src="./assets/img/small-line-03.png" alt="" class="about__decor" />
               </div>
               <div class="about__media-block">
                 <h3 class="media-block__heading">All Desingners</h3>
@@ -329,8 +366,8 @@
             </div>
             <section class="about__content">
               <p class="section-title">ABOUT US</p>
-              <h2 class="section-heading about__heading">We are an extention of your creative team</h2>
-              <p class="feature__desc section-desc--medium">
+              <h2 class="about__heading section-heading">We are an extention of your creative team</h2>
+              <p class="about__desc section-desc--medium">
                 At the start of every project, we cusomizea detailed project plan together with you set exectationns ensure alighment and define key
                 milestones and deiverbles.
               </p>

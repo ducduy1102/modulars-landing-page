@@ -227,7 +227,7 @@ button {
 
 .hero__heading {
   width: 368px;
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: 800;
   line-height: 1.2;
   color: var(--color-content);
@@ -333,7 +333,6 @@ button {
 }
 
 .hero__decor:nth-child(2) {
-  /* top: -486px; */
   top: -503px;
   left: -174px;
 }
@@ -368,7 +367,6 @@ button {
 }
 
 .donor__item {
-  flex-grow: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,7 +539,6 @@ button {
 
 .about__images {
   margin-top: 13px;
-  /* position: relative; */
   display: flex;
   height: 557px;
   column-gap: 21px;
@@ -561,7 +558,7 @@ button {
 }
 
 .about__decorate {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
 }
 
@@ -576,7 +573,7 @@ button {
 
 .about__decor:last-child {
   top: -556px;
-  left: 88px;
+  left: 89px;
 }
 
 /* About media */
@@ -744,8 +741,6 @@ button {
 
 .process__list {
   margin-top: 81px;
-  display: flex;
-  flex-direction: column;
 }
 
 .process-item {
@@ -753,26 +748,28 @@ button {
   height: 185px;
   display: flex;
   align-items: center;
-  transition: background, visibility;
-  transition-duration: 0.5s;
-}
-
-.process-item::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  top: 185px;
-  background: linear-gradient(180deg, #83a17d 4.17%, rgba(131, 161, 125, 0) 36.46%);
+  border-bottom: 1px solid #83A17D;
+  transition: background, border-radius, border-bottom;
+  transition-duration: 0.6s;
 }
 
 .process-item:hover {
   border-radius: 33px;
-  background: var(--scondery-color-light-green, #e2eddf);
+  border-bottom: none;
+  background: #e2eddf;
+}
+
+.process-item:hover .process-item__link,
+.process-item:hover .process-item__heading {
+  /* Cách 2: Dùng visibility + transform */
+  transform: translateY(-18px);
 }
 
 .process-item:hover .process-item__link {
+  /* C1: Dùng flex + block */
   /* display: block; */
+
+  /* Cách 2 dùng visibility */
   visibility: visible;
 }
 
@@ -788,6 +785,10 @@ button {
 .process-item__block {
   margin-left: 64px;
   width: 31%;
+  /* Cách 1: Dùng flex + block */
+  /* display: flex;
+  flex-direction: column;
+  row-gap: 22px; */
 }
 
 .process-item__block-01 {
@@ -798,16 +799,22 @@ button {
   font-size: 2.2rem;
   font-weight: 600;
   color: var(--color-content);
+  transition: transform;
+  transition-duration: 0.4s;
 }
 
 .process-item__link {
-  position: absolute;
-  margin-top: 22px;
   font-size: 18px;
   color: #575d5e;
   text-decoration: underline;
+  /* C1: Dùng flex + block */
   /* display: none; */
+  /* Cách 2: Dùng visibility + transform */
+  position: absolute;
+  margin-top: 22px;
   visibility: hidden;
+  transition: visibility, transform;
+  transition-duration: 0.2s;
 }
 
 .process-item__img {
@@ -836,8 +843,19 @@ button {
 }
 
 .project__heading {
+  position: relative;
   width: 457px;
   color: #e7f9f9;
+}
+
+.project__heading::after {
+  position: absolute;
+  content: '';
+  width: 66px;
+  height: 2px;
+  top: 83px;
+  right: 92px;
+  background: #83A17D;
 }
 
 .project-content {

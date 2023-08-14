@@ -561,7 +561,6 @@ button {
 .about__inner {
   display: flex;
   gap: 64px;
-  height: 570px;
 }
 
 .about__media {
